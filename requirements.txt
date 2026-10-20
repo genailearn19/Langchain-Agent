@@ -1,0 +1,12 @@
+langchain
+langchain-community
+langchain-core
+langchain-openai
+requests
+tavily-python
+python-dotenv
+langchainhub
+streamlit
+langchain-tavily
+langchain_classic
+certifi
