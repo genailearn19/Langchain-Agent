@@ -34,3 +34,7 @@ Gives your agent access to web-search functionality through the Tavily search se
 # .env
 OPENAI_API_KEY="Your Open API Key"
 TAVILY_API_KEY="Your Tavily API Key"
+
+**Architecture flow :**
+<img width="969" height="1600" alt="WhatsApp Image 2026-10-20 at 7 42 23 PM" src="https://github.com/user-attachments/assets/214dce80-9ce6-40b2-ac00-58c55504d770" />
+
