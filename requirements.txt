@@ -8,3 +8,5 @@ python-dotenv
 langchainhub
 streamlit
 langchain-tavily
+langchain_classic
+certifi
