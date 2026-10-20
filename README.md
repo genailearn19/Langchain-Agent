@@ -30,3 +30,7 @@ Define instructions for the AI and provide a place for conversation history or i
 
 **#8. TavilySearch**
 Gives your agent access to web-search functionality through the Tavily search service.
+
+# .env
+OPENAI_API_KEY="Your Open API Key"
+TAVILY_API_KEY="Your Tavily API Key"
