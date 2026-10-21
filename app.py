@@ -45,6 +45,12 @@ st.markdown(
       .small-muted { color: #64748b; font-size: .85rem; }
       div[data-testid="stChatMessage"] { border: 1px solid #e9edf5; border-radius: 18px; padding: .7rem 1rem; background: rgba(255,255,255,.85); }
       .stButton button { border-radius: 12px; font-weight: 600; }
+      .st-key-quick-prompts .stButton button {
+        background-color: #FDBA74; border-color: #FB923C; color: #431407;
+      }
+      .st-key-quick-prompts .stButton button:hover {
+        background-color: #FB923C; border-color: #F97316; color: #431407;
+      }
       div[data-testid="stChatInput"] { border-radius: 18px; }
       .status-pill { display:inline-block; padding: .3rem .65rem; border-radius: 999px; background: rgba(34,197,94,.14); color: #bbf7d0; font-size:.8rem; }
     </style>
@@ -172,10 +178,11 @@ with st.sidebar:
         "Compare current weather in Hyderabad and London.",
         "Explain how RAG works with a simple example.",
     ]
-    for i, q in enumerate(quick_prompts):
-        if st.button(q, key=f"quick_{i}", use_container_width=True):
-            st.session_state.pending_prompt = q
-            st.rerun()
+    with st.container(key="quick-prompts"):
+        for i, q in enumerate(quick_prompts):
+            if st.button(q, key=f"quick_{i}", use_container_width=True):
+                st.session_state.pending_prompt = q
+                st.rerun()
     st.markdown("---")
     st.caption("API keys are read from your local `.env` file. Never commit that file to Git.")
 
